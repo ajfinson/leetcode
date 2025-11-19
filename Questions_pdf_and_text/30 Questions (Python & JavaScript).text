@@ -2,10 +2,14 @@ Format: All questions first, then all answers (Python + JavaScript for each).
 
 Connecteam Coding Practice — Questions
 1. Two Sum
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. Assume exactly one solution, no reuse of element.
+Given an array of integers nums and an integer target,
+return indices of the two numbers such that they add up to target.
+Assume exactly one solution, no reuse of element.
 
 2. Contains Duplicate
-Given an integer array nums, return true if any value appears at least twice; otherwise false.
+Given an integer array nums,
+return true if any value appears at least twice;
+otherwise false.
 
 3. Valid Anagram
 Given two strings s and t, return true if t is an anagram of s.
@@ -101,6 +105,9 @@ def two_sum(nums, target):
         if target - x in seen:
             return [seen[target - x], i]
         seen[x] = i
+        
+    
+print(two_sum([1,2,3],5))
 JavaScript
 
 function twoSum(nums, target) {
@@ -116,6 +123,12 @@ Python
 
 def contains_duplicate(nums):
     return len(set(nums)) != len(nums)
+    ## set is a cool function that enforces uniqueness in a list.
+    So well get a list that is the same or shorter,
+    depending on if there are duplicits.
+    ##Time: O(n) - iterating through array to build set
+    ## Space: O(n) - set stores up to n unique elements
+    
 JavaScript
 
 function containsDuplicate(nums) {
